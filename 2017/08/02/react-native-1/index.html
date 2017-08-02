@@ -6,14 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | Hexo</title>
+  <title>Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
+  <meta name="description" content="React Native ̽�� ��һ���������̲��� ȫ�� + ���� �ķ�ʽ ���������漰�㣨Bundle)��  library ��������ģ�飩 project ��ҵ����Ŀģ�飩  Patch �Ĺ���  patch = diff( project - library ) patch = diff( projectVN - projectV(N-1)">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+<meta property="og:url" content="http://yoursite.com/2017/08/02/react-native-1/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="React Native ̽�� ��һ���������̲��� ȫ�� + ���� �ķ�ʽ ���������漰�㣨Bundle)��  library ��������ģ�飩 project ��ҵ����Ŀģ�飩  Patch �Ĺ���  patch = diff( project - library ) patch = diff( projectVN - projectV(N-1)">
+<meta property="og:updated_time" content="2017-08-02T05:44:36.494Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo">
+<meta name="twitter:description" content="React Native ̽�� ��һ���������̲��� ȫ�� + ���� �ķ�ʽ ���������漰�㣨Bundle)��  library ��������ģ�飩 project ��ҵ����Ŀģ�飩  Patch �Ĺ���  patch = diff( project - library ) patch = diff( projectVN - projectV(N-1)">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -149,70 +153,186 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-react-native-1" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="React-Native-̽��-��һ��"><a href="#React-Native-̽��-��һ��" class="headerlink" title="React Native ̽�� ��һ��"></a>React Native ̽�� ��һ��</h2><p>�������̲��� <strong>ȫ��</strong> + <strong>����</strong> �ķ�ʽ</p>
+<p>���������漰�㣨Bundle)��</p>
+<ul>
+<li>library ��������ģ�飩</li>
+<li>project ��ҵ����Ŀģ�飩</li>
+</ul>
+<p>Patch �Ĺ���</p>
+<ul>
+<li><code>patch = diff( project - library )</code></li>
+<li><p><code>patch = diff( projectVN - projectV(N-1) )</code></p>
+<p>����</p>
+<p>���Լ����£���10����Ŀ��ÿ����Ŀ3000������Ϊ׼��</p>
+<p>v1 - v3000 �Ĳ������� <code>(1+3000) * 3000 / 2</code></p>
+<p>������ҪԼ�������汾���ȣ����汾����̫�󣬽�����ɾ�����߲��Ե�����</p>
+</li>
+</ul>
+<p> �ش�����</p>
+<ul>
+<li>projectId , ��ʶ��Ŀ</li>
+<li>projectVersion , ��ǰ��Ŀ�汾</li>
+<li><p>libVersion , ��ǰ�ͻ���<strong>����</strong>���汾</p>
+<h3 id="���汾һ�µ���������"><a href="#���汾һ�µ���������" class="headerlink" title="���汾һ�µ���������"></a>���汾һ�µ���������</h3><p>���ջ��� <code>patch</code> ����������</p>
+<p>����˼·</p>
+</li>
+<li>�����ϲ�����</li>
+<li><p>�����ϲ�����</p>
+<p><strong>�����ϲ�����</strong></p>
+<p>����<code>common</code>�汾���������Ĳ��ﱣ�������� project[hotel] V10 )���������ǲ�����patch</p>
+<p>ȱ�����ڣ�����Ŀ�������ӵ�ʱ���� <code>common</code>�Ĵ�Сռ�Ȼ����ӣ� N ����Ŀ��С����Ϊ�� <code>common * (N + 1) + biz * N</code></p>
+<p>���͵Ŀռ任ʱ��</p>
+<p><strong>�����ϲ�����</strong></p>
+<p>����<code>common</code>�汾�����������������̬ȥ����patch �ϲ���</p>
+<p>������Ч���ƿռ���С��ֻ���� 1 �� <code>common</code> ���ݣ��� N �� patch �����հ��� patch �ĺϲ�·�����кϲ�<br>����ô�����˼���1��������ô��������<br>ȱ�����ڣ����汾���ȴ��������£�ʱ�������ıȽϾ�</p>
+<p>����ʱ�任ȡ�ռ�</p>
+<p><strong>����</strong></p>
+<p>��Ϊ<code>project</code>�����Ͼ����ڿɿط�Χ������<code>patch</code>�ĸ������ɿء�</p>
+<p>����ѡ��<strong>�����ϲ�����</strong></p>
+<h3 id="���汾��һ�µ���������"><a href="#���汾��һ�µ���������" class="headerlink" title="���汾��һ�µ���������"></a>���汾��һ�µ���������</h3><p>����Ҫ��һ���ǣ�<strong>1��ʲô���������ȿ����������°汾</strong></p>
+<p>Ȼ���ٽ����·����������������ӣ�</p>
+</li>
+<li><p>���������� ��Ϊ common2 , project Ϊ 4</p>
+</li>
+<li><p>�ͻ������� ��Ϊ common1 , project Ϊ 1</p>
+<p><code>common1 -&gt; common2</code></p>
+<p><code>project4 = common2 + diff(project4 - common2 )</code></p>
+<h3 id="�汾���ȴ�����������"><a href="#�汾���ȴ�����������" class="headerlink" title="�汾���ȴ�����������"></a>�汾���ȴ�����������</h3><p>�������˳��ڳ��в���ԭʼ</p>
+</li>
+</ul>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/08/02/react-native-1/" class="archive-article-date">
-  	<time datetime="2017-08-02T05:44:36.491Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-02</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/08/02/react-native-1/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/08/02/hello-world/" class="archive-article-date">
-  	<time datetime="2017-08-02T03:25:46.019Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-02</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2017/08/02/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Hello World</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/08/02/hello-world/">Hello World</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
 
 
           </div>
@@ -235,8 +355,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
